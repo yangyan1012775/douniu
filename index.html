@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>index</title>
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+		<style>
+			*{
+				margin:0;
+				padding:0;
+				list-style: none;
+				text-decoration: none;
+				text-align: center;
+			}
+			.clear:after {
+			    content: " "; 
+			    display: block;
+			    height: 0; 
+			    clear: both; 
+			    visibility: hidden;
+			} 
+			.container{
+				width:1242px;
+				margin:0 auto;
+				background: #ececec;
+				overflow: hidden;
+			}
+			.fixed{
+				position:fixed;
+				top:0;
+				left:0;
+				width:1242px;
+			}
+			header hgroup:nth-child(1){
+				background: #010101;
+				width:100%;
+				height:140px;
+			}
+			.banner{
+				width:236px;
+				float:left;
+				margin-left: 58px;
+			}
+			.message{
+				float:left;
+				margin: 30px 0 0 580px;
+				display: block;
+				width:70px;
+				height:70px;
+				background: url(images/message.png) -24px -12px;
+				transition: all 0.2s
+			}
+			.message:hover{
+				transform: scale(1.1);
+			}
+			.back{
+				float:left;
+				margin: 30px 0 0 68px;
+				display: block;
+				width:180px;
+				line-height:70px;
+				font-size: 50px;
+				color:#a4a4a4;
+				font-weight: 200;
+				transition: all 0.2s
+			}
+			.back:hover{
+				transform: scale(1.1);
+			}
+			.back p{
+				float: left;
+			}
+			.back img{
+				float: left;
+				margin-left: 30px;
+				height:70px;
+			}
+			header hgroup:nth-child(2){
+				position:relative;
+				background: #ececec;
+				width:100%;
+				height:142px;
+			}
+			#search{
+				width:1034px;
+				height:100px;
+				margin-top:20px;
+				border-radius: 50px;
+				border:2px solid #d2ae7e;
+				text-align: left;
+				padding-left: 110px;
+				font-size: 44px;
+				font-weight: 200;
+			}
+			#search::-webkit-input-placeholder{
+				color: #eadbc8;
+			}
+			header hgroup:nth-child(2) a{
+				position: absolute;
+				top:22px;
+				right:44px;
+				display: block;
+				width: 170px;
+				height:100px;
+				background: #d2ae7e;
+				border-top-right-radius: 50px;
+				border-bottom-right-radius: 50px;
+				
+			}
+			header hgroup:nth-child(2) a img{
+				margin-top: 26px;
+			}
+			nav{
+				-webkit-overflow-scrolling: touch;
+				overflow-x: scroll;
+				margin-top: -2px;
+			}
+			nav ul:nth-child(1){
+				width:1860px;
+				height: 166px;
+				background: #010101;
+			}
+			nav ul:nth-child(1) li{
+				float: left;
+				line-height: 140px;
+				font-size: 54px;
+				margin-left: 68px;
+
+			}
+			nav ul:nth-child(1) li:hover{
+				border-bottom: 4px solid #d3ad7c;
+			}
+			nav ul:nth-child(1) li a{
+				color: #d3ad7c;
+			}
+			.acting{
+				width:1242px;
+				height: 166px;
+				display: flex;
+				flex-flow: row;
+				background: #ffffff;
+			}
+			.acting li{
+				flex: 1;
+				font-size: 50px;
+				line-height: 166px;
+			}
+			.acting li a{
+				color: #101010;
+			}
+			.acting li a:hover{
+				color: #d4ae7f;
+			}
+			
+			.main{
+				background: #FFFFFF;
+				margin-top: 610px;
+				padding: 46px 50px 0 50px;
+			}
+			.video{
+				float:left;
+				width:562px;
+				height:500px;
+			}
+			.video:nth-child(2n){
+				margin-left: 10px;
+			}
+			.video video{
+				width:100%;
+			}
+			.video p{
+				text-align: left;
+				margin-left: 34px;
+			}
+			.video .title{
+				line-height: 90px;
+				font-size: 40px;
+				color:#5b5b5b;
+			}
+			.video .title:hover{
+				font-weight: 700;
+			}
+			.video .price{
+				line-height: 40px;
+				font-size: 34px;
+				color:#e75407;
+			}
+			.video .free{
+				color:#61b466;
+			}
+			.more{
+				width:100%;
+				padding:30px 0;
+				background: #ececec;
+			}
+			.more a{
+				font-size: 42px;
+				color:#5a5a5a;
+			}
+			.advertisement{
+				margin-top: 20px;
+				padding:20px 0;
+				background: #ececec;
+			}
+			.advertisement img{
+				width:100%;
+			}
+			.recommend{
+				padding:30px 50px;
+			}
+			.recommend p.title{
+				width:100%;
+				height:84px;
+				line-height: 84px;
+				font-size: 54px;
+				color: #0f0f0f;
+				text-align: left;
+				padding-left: 20px;
+				font-weight: 700;
+			}
+			.recommend a{
+				display: block;
+				padding: 20px 0;
+			}
+			.recommend a .guess{
+				float:left;
+				width:502px;
+			}
+			.recommend a .detail{
+				float: left;
+				width:496px;
+				margin-left: 30px;
+			}
+			.recommend a .detail p:nth-child(1){
+				text-align: left;
+				font-size: 48px;
+				color: #3d3d3d;
+				font-weight: 700;
+			}
+			.recommend a .detail p:nth-child(2){
+				margin-top: 110px;
+				text-align: left;
+				font-size:42px;
+				color: #afafaf;
+			}
+			footer{
+				display: flex;
+				flex-flow: row;
+				margin-top: 48px;
+				padding: 40px 18px;
+				background: #FFFFFF;
+			}
+			footer div{
+				flex: 1;
+				display: block;
+			}
+			footer div a{
+				display: block;
+				width:70px;
+				height:70px;
+				background: url(images/footer.png) -58px -18px;
+				margin:0 auto;
+			}
+			footer div.issue a{
+				background-position:-353px -19px;
+			}
+			footer div.live a{
+				background-position:-668px -18px;
+			}
+			footer div.me a{
+				background-position:-982px -18px;
+			}
+			footer div p{
+				font-size: 40px;
+				color: #343434;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="container clear">
+			<div class="fixed">
+				<header>
+					<hgroup class="clear">
+						<img src="images/banner.png" alt="load-err" class="banner"/>
+						<a href="#" class="message"></a>
+						<a href="#" class="back clear">
+							<p>返回</p>
+							<img src="images/arrow.png" alt="load-err" />
+						</a>
+					</hgroup>
+					<hgroup>
+						<input type="text" name="search" id="search" value="" placeholder="搜索您的关键词"/>
+						<a href="#"><img src="images/search.png"/></a>
+					</hgroup>
+				</header>
+				<nav>
+					<ul>
+						<li><a href="#">任务大厅</a></li>
+						<li><a href="#">战队</a></li>
+						<li><a href="#">游戏生活</a></li>
+						<li><a href="#">游戏资讯</a></li>
+						<li><a href="#">战队</a></li>
+						<li><a href="#">游戏生活</a></li>
+						<li><a href="#">游戏资讯</a></li>
+					</ul>
+					
+				</nav>
+				<ul class="acting">
+					<li><a href="#">代练任务</a></li>
+					<li><a href="#">代练直播</a></li>
+					<li><a href="#">团队介绍</a></li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+			</div>
+			
+			<div class="main">
+				<div class="clear">
+					<div class="video">
+						<video src="#" poster="images/one.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price">￥20</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/two.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price free">免费</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/three.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price">￥20</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/four.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price free">免费</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/five.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price">￥20</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/six.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price free">免费</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/seven.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price">￥20</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/eight.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price free">免费</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/nine.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price">￥20</p>
+					</div>
+					<div class="video">
+						<video src="#" poster="images/ten.png"></video>
+						<p class="title">Mr.Cat与TeamVGJ...</p>
+						<p class="price free">免费</p>
+					</div>
+				</div>
+				<div class="more">
+					<a href="#">查看更多</a>
+				</div>
+				<div class="advertisement">
+					<a href="#"><img src="images/uc_browser.png" alt="" /></a>
+				</div>
+				<div class="recommend">
+					<p class="title">猜你喜欢</p>
+					<a href="#" class="clear">
+						<img class="guess" src="images/guess1.png" alt="load-err" />
+						<div class="detail">
+							<p>Mr.Cat与TeamVGJ达成协议  助力基辅Major</p>
+							<p>2017_08_08</p>
+						</div>
+					</a>
+					<a href="#" class="clear">
+						<img class="guess" src="images/guess2.png" alt="load-err" />
+						<div class="detail">
+							<p>Mr.Cat与TeamVGJ达成协议  助力基辅Major</p>
+							<p>2017_08_08</p>
+						</div>
+					</a>
+					<a href="#" class="clear">
+						<img class="guess" src="images/guess3.png" alt="load-err" />
+						<div class="detail">
+							<p>Mr.Cat与TeamVGJ达成协议  助力基辅Major</p>
+							<p>2017_08_08</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+			<footer>
+				<div class="home">
+					<a href="#" class="icon"></a>
+					<p>首页</p>
+				</div>
+				<div class="issue">
+					<a href="#"></a>
+					<p>发布</p>
+				</div>
+				<div class="live">
+					<a href="#"></a>
+					<p>直播</p>
+				</div>
+				<div class="me">
+					<a href="#"></a>
+					<p>我的</p>
+				</div>
+			</footer>
+			
+		</div>
+	</body>
+</html>
