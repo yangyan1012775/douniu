@@ -3,8 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>index</title>
-		<!--<meta name="viewport" content="user-scalable=no">-->
-		
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 		<style>
 			*{
 				margin:0;
@@ -44,15 +43,17 @@
 			}
 			.message{
 				float:left;
-				margin: .2rem 0 0 5.8rem;
+				margin: .1rem 0 0 5.8rem;
 				display: block;
 				width:1.1rem;
 				height:1.1rem;
-				background: url(images/message.png) -0.43rem -0.2rem;
 				transition: all 0.2s
 			}
 			.message:hover{
 				transform: scale(1.1);
+			}
+			.message img{
+				width:1.1rem;
 			}
 			.back{
 				float:left;
@@ -107,6 +108,10 @@
 				background: #d2ae7e;
 				border-top-right-radius: .5rem;
 				border-bottom-right-radius: .5rem;
+			}
+			header hgroup:nth-child(2) img{
+				margin-bottom:.16rem;
+				width:.6rem;
 			}
 			nav{
 				-webkit-overflow-scrolling: touch;
@@ -261,17 +266,10 @@
 				display: block;
 				width:1.1rem;
 				height:1.1rem;
-				background: url(images/footer.png) -0.94rem -0.32rem;
 				margin:0 auto;
 			}
-			footer div.issue a{
-				background-position:-5.63rem -0.32rem;
-			}
-			footer div.live a{
-				background-position:-10.58rem -0.32rem;
-			}
-			footer div.me a{
-				background-position:-15.52rem -0.32rem;
+			footer div a img{
+				width:100%;
 			}
 			footer div p{
 				font-size: .4rem;
@@ -286,7 +284,7 @@
 				<header>
 					<hgroup class="clear">
 						<img src="images/banner.png" alt="load-err" class="banner"/>
-						<a href="#" class="message"></a>
+						<a href="#" class="message"><img src="images/message.png"/></a>
 						<a href="#" class="back clear">
 							<p>返回</p>
 							<img src="images/arrow.png" alt="load-err" />
@@ -370,7 +368,6 @@
 					</div>
 				</div>
 				<div class="more">
-					<!--fdytdfuyg-->
 					<a href="#">查看更多</a>
 				</div>
 				<div class="advertisement">
@@ -404,19 +401,19 @@
 			
 			<footer>
 				<div class="home">
-					<a href="#" class="icon"></a>
+					<a href="#"><img src="images/home.png"/></a>
 					<p>首页</p>
 				</div>
 				<div class="issue">
-					<a href="#"></a>
+					<a href="#"><img src="images/issue.png"/></a>
 					<p>发布</p>
 				</div>
 				<div class="live">
-					<a href="#"></a>
+					<a href="#"><img src="images/live.png"/></a>
 					<p>直播</p>
 				</div>
 				<div class="me">
-					<a href="#"></a>
+					<a href="#"><img src="images/me.png"/></a>
 					<p>我的</p>
 				</div>
 			</footer>
