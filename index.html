@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>index</title>
-		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+		<!--<meta name="viewport" content="user-scalable=no">-->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 		<style>
 			*{
 				margin:0;
@@ -20,7 +21,7 @@
 			    visibility: hidden;
 			} 
 			.container{
-				width:1242px;
+				width:12.42rem;
 				margin:0 auto;
 				background: #ececec;
 				overflow: hidden;
@@ -29,25 +30,25 @@
 				position:fixed;
 				top:0;
 				left:0;
-				width:1242px;
+				width:12.42rem;
 			}
 			header hgroup:nth-child(1){
 				background: #010101;
 				width:100%;
-				height:140px;
+				height:1.4rem;
 			}
 			.banner{
-				width:236px;
+				width:2.36rem;
 				float:left;
-				margin-left: 58px;
+				margin-left: .58rem;
 			}
 			.message{
 				float:left;
-				margin: 30px 0 0 580px;
+				margin: .2rem 0 0 5.8rem;
 				display: block;
-				width:70px;
-				height:70px;
-				background: url(images/message.png) -24px -12px;
+				width:1.1rem;
+				height:1.1rem;
+				background: url(images/message.png) -0.43rem -0.2rem;
 				transition: all 0.2s
 			}
 			.message:hover{
@@ -55,11 +56,11 @@
 			}
 			.back{
 				float:left;
-				margin: 30px 0 0 68px;
+				margin: .3rem 0 0 .68rem;
 				display: block;
-				width:180px;
-				line-height:70px;
-				font-size: 50px;
+				width:1.8rem;
+				line-height:.7rem;
+				font-size: .5rem;
 				color:#a4a4a4;
 				font-weight: 200;
 				transition: all 0.2s
@@ -72,78 +73,73 @@
 			}
 			.back img{
 				float: left;
-				margin-left: 30px;
-				height:70px;
+				margin-left: .3rem;
+				height:.7rem;
 			}
 			header hgroup:nth-child(2){
 				position:relative;
 				background: #ececec;
 				width:100%;
-				height:142px;
+				height: 1.8rem;
 			}
 			#search{
-				width:1034px;
-				height:100px;
-				margin-top:20px;
-				border-radius: 50px;
-				border:2px solid #d2ae7e;
+				width:10.34rem;
+				height:1rem;
+				margin-top:.2rem;
+				border-radius: .5rem;
+				border:0.02rem solid #d2ae7e;
 				text-align: left;
-				padding-left: 110px;
-				font-size: 44px;
+				padding-left: 1.1rem;
+				font-size: .44rem;
 				font-weight: 200;
+				outline:none;
 			}
 			#search::-webkit-input-placeholder{
 				color: #eadbc8;
 			}
 			header hgroup:nth-child(2) a{
 				position: absolute;
-				top:22px;
-				right:44px;
+				top:.43rem;
+				right:.5rem;
 				display: block;
-				width: 170px;
-				height:100px;
+				width: 1.7rem;
+				height:1rem;
 				background: #d2ae7e;
-				border-top-right-radius: 50px;
-				border-bottom-right-radius: 50px;
-				
-			}
-			header hgroup:nth-child(2) a img{
-				margin-top: 26px;
+				border-top-right-radius: .5rem;
+				border-bottom-right-radius: .5rem;
 			}
 			nav{
 				-webkit-overflow-scrolling: touch;
 				overflow-x: scroll;
-				margin-top: -2px;
 			}
-			nav ul:nth-child(1){
-				width:1860px;
-				height: 166px;
+			nav ul{
+				width:18.6rem;
+				height: 1.5rem;
 				background: #010101;
 			}
-			nav ul:nth-child(1) li{
+			nav ul li{
 				float: left;
-				line-height: 140px;
-				font-size: 54px;
-				margin-left: 68px;
-
+				line-height: 1.4rem;
+				font-size: .54rem;
+				margin-left: .68rem;
 			}
-			nav ul:nth-child(1) li:hover{
-				border-bottom: 4px solid #d3ad7c;
+			nav ul  li:hover{
+				border-bottom: 0.04rem solid #d3ad7c;
 			}
-			nav ul:nth-child(1) li a{
+			nav ul  li a{
 				color: #d3ad7c;
 			}
 			.acting{
-				width:1242px;
-				height: 166px;
+				width:12.42rem;
+				height: 1.5rem;
 				display: flex;
 				flex-flow: row;
 				background: #ffffff;
 			}
 			.acting li{
 				flex: 1;
-				font-size: 50px;
-				line-height: 166px;
+				font-size: .5rem;
+				line-height: 1.66rem;
 			}
 			.acting li a{
 				color: #101010;
@@ -154,35 +150,35 @@
 			
 			.main{
 				background: #FFFFFF;
-				margin-top: 610px;
-				padding: 46px 50px 0 50px;
+				margin-top: 6.6rem;
+				padding: .46rem .5rem 0 .5rem;
 			}
 			.video{
 				float:left;
-				width:562px;
-				height:500px;
+				width:5.62rem;
+				height:5rem;
 			}
 			.video:nth-child(2n){
-				margin-left: 10px;
+				margin-left: .1rem;
 			}
 			.video video{
 				width:100%;
 			}
 			.video p{
 				text-align: left;
-				margin-left: 34px;
+				margin-left: .34rem;
 			}
 			.video .title{
-				line-height: 90px;
-				font-size: 40px;
+				line-height: .9rem;
+				font-size: .4rem;
 				color:#5b5b5b;
 			}
 			.video .title:hover{
 				font-weight: 700;
 			}
 			.video .price{
-				line-height: 40px;
-				font-size: 34px;
+				line-height: .4rem;
+				font-size: .34rem;
 				color:#e75407;
 			}
 			.video .free{
@@ -190,64 +186,71 @@
 			}
 			.more{
 				width:100%;
-				padding:30px 0;
+				height:1rem;
+				padding:0 0 .3rem 0;
 				background: #ececec;
+				line-height: 1rem;
 			}
 			.more a{
-				font-size: 42px;
+				margin-top: -1rem;
+				font-size: .42rem;
 				color:#5a5a5a;
 			}
 			.advertisement{
-				margin-top: 20px;
-				padding:20px 0;
+				margin-top: .2rem;
+				padding-top: .2rem;
 				background: #ececec;
+			}
+			.advertisement a{
+				display: block;
+				padding-bottom: -1rem;
 			}
 			.advertisement img{
 				width:100%;
 			}
 			.recommend{
-				padding:30px 50px;
+				padding:.3rem .5rem;
 			}
 			.recommend p.title{
 				width:100%;
-				height:84px;
-				line-height: 84px;
-				font-size: 54px;
+				height:.84rem;
+				line-height: .84rem;
+				font-size: .54rem;
 				color: #0f0f0f;
 				text-align: left;
-				padding-left: 20px;
+				padding-left: .2rem;
 				font-weight: 700;
 			}
 			.recommend a{
 				display: block;
-				padding: 20px 0;
+				padding: .2rem 0;
 			}
 			.recommend a .guess{
 				float:left;
-				width:502px;
+				width:5.02rem;
 			}
 			.recommend a .detail{
 				float: left;
-				width:496px;
-				margin-left: 30px;
+				width:4.96rem;
+				margin-left: .3rem;
 			}
 			.recommend a .detail p:nth-child(1){
 				text-align: left;
-				font-size: 48px;
+				font-size: .48rem;
 				color: #3d3d3d;
 				font-weight: 700;
 			}
 			.recommend a .detail p:nth-child(2){
-				margin-top: 110px;
+				margin-top: .9rem;
 				text-align: left;
-				font-size:42px;
+				font-size:.42rem;
 				color: #afafaf;
 			}
 			footer{
 				display: flex;
 				flex-flow: row;
-				margin-top: 48px;
-				padding: 40px 18px;
+				margin-top: .48rem;
+				padding: .4rem .18rem;
 				background: #FFFFFF;
 			}
 			footer div{
@@ -256,22 +259,22 @@
 			}
 			footer div a{
 				display: block;
-				width:70px;
-				height:70px;
-				background: url(images/footer.png) -58px -18px;
+				width:1.1rem;
+				height:1.1rem;
+				background: url(images/footer.png) -0.94rem -0.32rem;
 				margin:0 auto;
 			}
 			footer div.issue a{
-				background-position:-353px -19px;
+				background-position:-5.63rem -0.32rem;
 			}
 			footer div.live a{
-				background-position:-668px -18px;
+				background-position:-10.58rem -0.32rem;
 			}
 			footer div.me a{
-				background-position:-982px -18px;
+				background-position:-15.52rem -0.32rem;
 			}
 			footer div p{
-				font-size: 40px;
+				font-size: .4rem;
 				color: #343434;
 			}
 			
@@ -289,7 +292,7 @@
 							<img src="images/arrow.png" alt="load-err" />
 						</a>
 					</hgroup>
-					<hgroup>
+					<hgroup class="clear">
 						<input type="text" name="search" id="search" value="" placeholder="搜索您的关键词"/>
 						<a href="#"><img src="images/search.png"/></a>
 					</hgroup>
@@ -304,7 +307,6 @@
 						<li><a href="#">游戏生活</a></li>
 						<li><a href="#">游戏资讯</a></li>
 					</ul>
-					
 				</nav>
 				<ul class="acting">
 					<li><a href="#">代练任务</a></li>
@@ -368,6 +370,7 @@
 					</div>
 				</div>
 				<div class="more">
+					<!--fdytdfuyg-->
 					<a href="#">查看更多</a>
 				</div>
 				<div class="advertisement">
@@ -420,4 +423,7 @@
 			
 		</div>
 	</body>
+	<script>
+		document.getElementsByTagName("html")[0].style.fontSize=(window.innerWidth/1242)*100+"px";
+	</script>
 </html>
